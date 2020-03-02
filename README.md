@@ -7,8 +7,10 @@
 
 ```terminal
     git clone https://github.com/Judison1/Laravel-Livewire-Test.git
+    cd Laravel-Livewire-Test/
     composer install
     npm install && npm run dev
+    php artisan migrate
 ```
 
 ## License
