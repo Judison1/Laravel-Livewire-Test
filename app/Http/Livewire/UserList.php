@@ -13,6 +13,7 @@ class UserList extends Component
 
     public $search;
     protected $updatesQueryString = ['search'];
+    public $user;
 
     public function mount()
     {
@@ -21,11 +22,17 @@ class UserList extends Component
 
     public function getUsersProperty()
     {
-       return User::where('name', 'ilike', '%'.$this->search.'%')->orWhere('email', 'ilike', '%'.$this->search.'%')->orderBy('updated_at', 'desc')->paginate(10);
+       return User::where('name', 'ilike', '%'.$this->search.'%')->orWhere('email', 'ilike', '%'.$this->search.'%')->orderBy('id', 'desc')->paginate(10);
     }
 
-    public function destroy(User $user){
-        $user->delete();
+    public function update($id)
+    {
+        $user = User::find($id);
+        $user->update($this->user[$id]);
+    }
+
+    public function destroy($id){
+        User::findOrFail($id)->delete();
     }
 
     public function render()
