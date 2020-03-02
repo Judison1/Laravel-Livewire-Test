@@ -1,5 +1,9 @@
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="200"></p>
-# Teste do Laravel Liveriwe
+
+## Sobre
+   É apenas um teste do pacote Livewire com um simples CRUD de usuário.
+
+## Install
 
 ```terminal
     git clone https://github.com/Judison1/Laravel-Livewire-Test.git
